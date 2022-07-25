@@ -1,0 +1,546 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.group:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/*
+  ======================================
+  Typography
+  ======================================
+*/
+html {
+  font-size: 62.5%;
+  font-family: 'Playfair Display', 'roboto', Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6,span,a {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 8rem;
+  color: #fff;
+}
+h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.7rem;
+}
+p {
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+span {
+  font-size: 1.7rem;
+}
+ul {
+  list-style: none;
+}
+
+/*
+  ========================================
+  Btns and anchor styles
+  ========================================
+*/
+
+.whtonblk {
+  background: black;
+  color: white;
+}
+.blkonwht {
+  background: white;
+  color:black;
+}
+.btn {
+  padding: 8px 17px;
+  font-size: 1.5rem;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+header {
+  background: #fff;
+}
+.imgContainer {
+  background: url(../images/heroaltfinal.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.row {
+  background: rgb(233, 233, 233);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  height: 50px;
+  background: rgba(255,255,255,0)
+}
+nav {
+  width: 90%;
+  height: 35px;
+  margin: 0 auto 15px auto;
+  padding-top: 5px;
+}
+/* 
+  =========================================
+  HEADER
+  =========================================
+*/
+nav * {
+  float:left;
+  padding-top: 5px;
+}
+.logo {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  width: 25%;
+  color: #fff;
+}
+nav ul {
+  float: right;
+  width: 70%;
+  margin: 0 auto;
+}
+nav li {
+  float: right;
+  width: 12.5%;
+  text-align: center;
+}
+nav ul a {
+  width: 100% ;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ------- Header Media queries ------ */
+@media screen and (max-width: 600px) {
+  nav li {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+/*
+  ======================================
+  HERO
+  ======================================
+*/  
+.hero_top h1,
+.hero_top p,
+.hero_top > a{
+  margin-left: 20%;
+}
+main h1 {
+  padding-top: 150px;
+  line-height: 7rem;
+}
+.hero_top p {
+  font-family: 'Playfair Display';
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color:rgb(233, 233, 233);
+  margin-top: 15px;
+}
+.hero_top > a {
+  margin: 20px 0 60px 20%;
+  display: inline-block;
+}
+.hero_top > span {
+  color: #fff;
+}
+/* hero first time offer */
+.hero_offer {
+  width: 250px;
+  background: rgba(100, 100, 100,0.4);
+  margin-left: 20%;
+  line-height: 4rem;
+}
+.hero_offer h4 {
+  color: #fff;
+  padding-top: 40px;
+  width: 210px;
+  margin: 0 auto;
+}
+.hero_offer p {
+  width: 210px;
+  margin: 20px auto 15px auto;
+  font-size: 1.3rem;
+}
+.hero_offer span {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.hero_offer a {
+  display: inline-block;
+  margin: 20px 0 30px 40px;
+  line-height: 1.6rem;
+}
+
+.rotate {
+  display: block;
+  float: right;
+  transform: rotate(90deg);
+  position: relative;
+  top: 20px;
+  right: -70px;
+}
+
+/* three columns */
+.columns {
+  width: 75%;
+  margin: 0 auto;
+  padding: 120px 0;
+  color: rgba(255, 255, 255);
+}
+.col_3 {
+  float: left;
+  width: 33.3333%;
+  height: 250px;
+  text-align: center;
+  line-height: 2rem;
+  background: rgba(255, 255, 255,0.2)
+}
+.col_3 h4 {
+  margin-top: 25px;
+}
+.col_3 p {
+  width: 70%;
+  margin: 25px auto;
+}
+.col_3 i {
+  font-size: 4rem;
+  padding-top: 15px;
+}
+
+/* ------- Hero queries ------ */
+@media screen and (max-width: 600px) {
+  .hero_top h1,
+.hero_top p,
+.hero_top > a{
+  margin-left: 5%;
+}
+.rotate {
+  top: -150px;
+}
+.hero_offer {
+  margin: 50px auto;
+  text-align: center;
+}
+.hero_offer a,
+.hero_offer p {
+  margin: 20px auto;
+}
+.columns {
+  padding-top: 40px;
+}
+.col_3 {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+}
+/* 
+  =====================================
+  Row below hero
+  =====================================
+*/
+
+.rowCol_2 {
+  width: 50%;
+  float: left;
+}
+.row h2,
+.row p,
+.row a {
+  margin-left: 30%;
+}
+.row h2 {
+  padding-top: 135px;
+}
+.row p {
+  width: 60%;
+  margin-top: 50px;
+}
+.row a {
+  display: inline-block;
+  margin: 50px 0 60px 30%;
+}
+
+.row img {
+  float: right;
+  margin: 75px 15% 75px 60px;
+  width:65%;
+}
+
+
+/* Row below hero Media query */ 
+
+@media screen and (max-width: 600px) {
+  .rowCol_2 {
+    width: 100%;
+  }
+  .row h2 {
+    padding-top: 50px;
+  }
+  .row h2,
+  .row p,
+  .row a {
+    margin: 10px auto;
+    text-align: center;
+  }
+  .row p,
+  .row img {
+    width: 90%;
+  }
+  .row img {
+    display: block;
+    margin: 35px 20px;
+  }
+  .row a {
+    display: block;
+    width: 40%;
+  }
+}
+
+/*
+  ===================================
+  STYLISTS
+  ===================================
+*/
+
+.stylists_sec {
+  width: 70%;
+  margin: auto;
+}
+.stylistContainer {
+  float: left;
+  width: calc(33.3333% - 60px);
+  margin: 0 30px;
+  text-align: center;
+}
+.stylists_sec img {
+  width: calc(100%);
+  margin: 0 15px;
+  padding-top: 70px;
+}
+.stylist_col {
+  z-index: 1;
+  width: 100%;
+  margin: 0 15px;
+}
+.stylist_col h3,
+.stylist_col span {
+  width: 80%;
+  margin:0 auto;
+  padding: 8px 0;
+  display: block;
+  position: relative;
+  top: -35px;
+}
+
+
+
+/* Stylists Media Queries */ 
+
+@media screen and (max-width: 600px) {
+  .stylistContainer{
+    width: 95%;
+    margin: auto;
+  }
+  .stylists_sec img {
+    margin: 0;
+    padding-top: 20px;
+  }
+  .stylist_col {
+    
+    margin: auto;
+  }
+}
+
+/*
+  ===================================
+  Specail offers
+  ===================================
+*/
+.specialOff {
+  width: 63%;
+  background: rgb(236, 235, 235);
+  background: url('../images/bannerfinal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 75px auto;
+  padding-top: 50px;
+  line-height: 7rem;
+}
+.specialOff h4,
+.specialOff p,
+.specialOff a {
+  margin: 0 0 0 7%;
+  color: #fff;
+}
+.specialOff h4{
+  margin-top: 20px;
+}
+.specialOff p {
+  width: 40%;
+  font-size: 3rem;
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+.specialOff span {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.specialOff a {
+  display: inline-block;
+  line-height: 2rem;
+  margin-bottom: 75px;
+}
+
+/* Special Offers Media Queries */ 
+
+@media screen and (max-width: 600px) {
+  .specialOff {
+    width: 100%;
+  }
+  .specialOff p {
+    width: 80%;
+  }
+}
+
+/*
+  ==========================================
+  LookBook
+  ==========================================
+*/
+
+.lookbook { 
+  width: 63%;
+  margin: 0 auto;
+  text-align: center;
+}
+.lookbookCol {
+  width: 33.3333%;
+  float: left;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+.lookbook img {
+  float: left;
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+
+/* Lookbook media queries */ 
+
+@media screen and (max-width: 600px) {
+  .lookbook {
+    width: 100%;
+  }
+  .lookbook h2 {
+    padding-bottom: 30px;
+  }
+  .lookbookCol {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .lookbook img {
+    width:100%;
+    margin: 0;
+  }
+}
+
+/* 
+  ==========================================
+  Contact
+  ==========================================
+*/
+.contactContainer {
+  background: url('../images/bannerfinal.jpg');
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.contact {
+  width: 65%;
+  margin: auto;
+  padding-top: 30px;
+}
+.contactDetails,
+form {
+  float: left;
+  width: 50%;
+}
+form {
+  text-align: right;
+}
+.contact input,
+.contact textarea,
+.contact span {
+  display: block;
+  color: rgb(255,255,255);
+}
+.contact span {
+  margin-top: 10px;
+  
+}
+input,
+textarea {
+  width: 100%;
+  font-family: 'Playfair Display';
+  background: rgba(255, 255, 255,0.3);
+  margin: 10px auto;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0);
+}
+form > .blkonwht {
+  font-family: 'Playfair Display';
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255,0.7);
+}
+
+/* Contact media queries */ 
+
+@media screen and (max-width: 600px) {
+  .contactDetails,
+  form {
+  width: 100%;
+  }
+}
